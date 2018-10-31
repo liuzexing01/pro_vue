@@ -1,6 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+
+import Home from './components/tarbar/Home.vue'
+import Classify from './components/tarbar/Classify.vue'
+import Cart from './components/tarbar/Cart.vue'
+import Member from './components/tarbar/Member.vue'
+import Erweima from './components/memberMsg/erweima.vue'
 
 Vue.use(Router)
 
@@ -14,12 +19,29 @@ export default new Router({
       component: Home
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+      path: '/Home',
+      name: 'Home',
+      component: Home
+    },
+    {
+      path: '/Classify',
+      name: 'Classify',
+      component: Classify
+    },
+    {
+      path: '/Cart',
+      name: 'Cart',
+      component: Cart
+    },
+    {
+      path: '/Member',
+      name: 'Member',
+      component: Member
+    },
+    {
+      path: '/Erweima',
+      name: 'Erweima',
+      component: Erweima
     }
-  ]
+  ],linkActiveClass:"mui-active"
 })
